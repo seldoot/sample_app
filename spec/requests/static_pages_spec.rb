@@ -48,7 +48,7 @@ describe "Static pages" do
 			expect(page).to have_content(Contact)
 		end
 
-		it "should have the title 'About Us'" do
+		it "should have the title 'Contact'" do
 			visit 'static_pages/contact'
 			expect(page).to have_title("Ruby on Rials Tutorial Sample App | Contact")
 		end
