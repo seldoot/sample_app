@@ -1,7 +1,5 @@
 class User < ActiveRecord::Base
 
-	
-
 	before_save {self.email = email.downcase}
 	before_create :create_remember_token
 
@@ -30,7 +28,6 @@ class User < ActiveRecord::Base
 		def create_remember_token
 			self.remember_token = User.hash(User.new_remember_token)
 		end
-
 end
 
 
